@@ -28,12 +28,13 @@ def main():
     while True:
         try:
             for c in ser.read():
-#                print(chr(c))
+		        print(c)
                 line.append(chr(c))
                 if chr(c) == '\n':
                     dataString     = (''.join(line))
                     dataStringPost = dataString.replace('\n', '')
                     print("================")
+            
                     mSR.IPS7100Write(dataStringPost,datetime.datetime.now())
                     line = []
                     break
