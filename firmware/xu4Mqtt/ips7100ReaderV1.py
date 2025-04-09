@@ -4,6 +4,7 @@ import datetime
 from mintsXU4 import mintsSensorReader as mSR
 from mintsXU4 import mintsDefinitions as mD
 import sys
+import traceback
 
 dataFolder  = mD.dataFolder
 ipsPort     = mD.ipsPorts[0]
@@ -40,6 +41,9 @@ def main():
                     break
         except:
             print("Incomplete String Read")
+            print("Incomplete String Read")
+            print(f"Error: {e}")
+            traceback.print_exc()            
             line = []
     ser.close()
 
