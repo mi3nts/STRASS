@@ -384,7 +384,7 @@ def IPS7100Write(sensorData,dateTime):
     print(len(dataOut))
     sensorName = "IPS7100"
     dataLength = 30
-    if((len(dataOut) == (dataLength)) or ((len(dataOut) -1  == (dataLength)))):
+    if((len(dataOut) == (dataLength)) or ((len(dataOut)  == (dataLength -1)))):
         sensorDictionary =  OrderedDict([
                 ("dateTime" , str(dateTime)), # always the same
         		("pc0_1"  ,dataOut[1]), 
