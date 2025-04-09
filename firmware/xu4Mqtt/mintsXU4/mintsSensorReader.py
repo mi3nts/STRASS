@@ -379,8 +379,9 @@ def AS3935Write(sensorData,dateTime):
 
         
 def IPS7100Write(sensorData,dateTime):
-    print(len(dataOut))
+
     dataOut    = sensorData.split(',')
+    print(len(dataOut))
     sensorName = "IPS7100"
     dataLength = 30
     if((len(dataOut) == (dataLength)) or ((len(dataOut) -1  == (dataLength)))):
