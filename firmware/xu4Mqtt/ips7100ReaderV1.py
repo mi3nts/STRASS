@@ -34,7 +34,7 @@ def main():
                     dataString     = (''.join(line))
                     dataStringPost = dataString.replace('\n', '')
                     print("================")
-            
+                    print(dataStringPost)
                     mSR.IPS7100Write(dataStringPost,datetime.datetime.now())
                     line = []
                     break
