@@ -28,7 +28,7 @@ def main():
     while True:
         try:
             for c in ser.read():
-                print(c)
+                # print(c)
                 line.append(chr(c))
                 if chr(c) == '\n':
                     dataString     = (''.join(line))
