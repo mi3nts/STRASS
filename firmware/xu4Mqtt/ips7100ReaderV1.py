@@ -39,9 +39,9 @@ def main():
                     mSR.IPS7100Write(dataStringPost,datetime.datetime.now())
                     line = []
                     break
-        except:
+        except Exception as e:
             print("Incomplete String Read")
-            print("Incomplete String Read")
+
             print(f"Error: {e}")
             traceback.print_exc()            
             line = []
